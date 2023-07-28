@@ -19,3 +19,16 @@ steps:
     pwd 
     ls -ltr 
   displayName: 'Run a multi-line script'
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'MCAPS-Hybrid-REQ-48872-2022-GaryCiampa (32f5e9a7-8253-4f47-9f6f-8d5a7b8a3477)'
+    subscriptionId: '32f5e9a7-8253-4f47-9f6f-8d5a7b8a3477'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'gaciampap1_rg1'
+    location: 'East US 2'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/garyciampa/ARMPipeline-repo/main/azuredeploy.json'
+    overrideParameters: '-projectName gaciampap1'
+    deploymentMode: 'Incremental'
+    deploymentName: 'Demo linked template'
