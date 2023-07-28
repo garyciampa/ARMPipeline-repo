@@ -31,4 +31,4 @@ steps:
     csmFileLink: 'https://raw.githubusercontent.com/garyciampa/ARMPipeline-repo/main/azuredeploy.json'
     overrideParameters: '-projectName gaciampap1'
     deploymentMode: 'Incremental'
-    deploymentName: 'Demo linked template'
+    deploymentName: 'DemoLinkedTemplate'
